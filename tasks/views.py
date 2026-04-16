@@ -158,9 +158,8 @@ class TaskCommentViewSet(ModelViewSet):
     def get_queryset(self):
         qs = TaskComment.objects.filter(
             task=self.get_task()
-        ).select_related(
-            "author"
         )
+        return qs
     
     def get_serializer_context(self):
         context = super().get_serializer_context()

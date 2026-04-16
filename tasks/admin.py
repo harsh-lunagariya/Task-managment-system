@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Task
+from .models import Task, TaskComment
 from workspaces.models import WorkspaceMembership
 
 # Register your models here.
@@ -19,3 +19,5 @@ class TaskAdmin(admin.ModelAdmin):
                     "Assigned user must belongs to the same workspace."
                 )
         super().save_model(request, obj, form, change)
+
+admin.site.register(TaskComment)

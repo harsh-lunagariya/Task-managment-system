@@ -58,7 +58,7 @@ class TaskSerializer(serializers.ModelSerializer):
         many=True,
         read_only=True
     )
-    
+        
     class Meta:
         model = Task
         fields = [

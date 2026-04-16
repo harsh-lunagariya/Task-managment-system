@@ -1,3 +1,20 @@
+## Task managment system (API only)
+
+### Project Overview
+
+Task managment system is a Django REST API project for managing workspaces, projects, tasks, and task comments in a team environment. It provides authentication, role-based access control, task assignment, filtering, ordering, and activity tracking for structured task management workflows.
+
+### Main Features
+
+- JWT-based authentication for secure API access
+- Workspace creation and member management with role-based permissions
+- Project management inside workspaces
+- Task CRUD operations nested under projects
+- Task comments for team collaboration
+- Filtering and ordering support for task listing endpoints
+- Custom user model with admin-managed user creation
+- Activity logging for important workspace and task actions
+
 ## 🔐 AUTH APIs (accounts)
 
 | Method | Endpoint               | Purpose                       |
@@ -121,4 +138,3 @@
 /api/projects/{project_id}/tasks/?ordering=-created_at
 /api/projects/{project_id}/tasks/?ordering=status,-created_at
 ```
-

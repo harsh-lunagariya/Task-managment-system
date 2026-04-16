@@ -16,7 +16,7 @@ class ProjectViewSet(ModelViewSet):
 
         if self.action == "retrieve":
             qs = qs.prefetch_related(
-                "tasks_comments"
+                "tasks__comments"
             )
             
         return qs
