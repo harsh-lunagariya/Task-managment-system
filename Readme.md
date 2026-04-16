@@ -15,7 +15,7 @@ Task managment system is a Django REST API project for managing workspaces, proj
 - Custom user model with admin-managed user creation
 - Activity logging for important workspace and task actions
 
-## 🔐 AUTH APIs (accounts)
+### 🔐 AUTH APIs (accounts)
 
 | Method | Endpoint               | Purpose                       |
 | ------ | ---------------------- | ----------------------------- |
@@ -26,9 +26,9 @@ Task managment system is a Django REST API project for managing workspaces, proj
 
 
 
-## 🏢 WORKSPACE APIs
+### 🏢 WORKSPACE APIs
 
-### Workspace CRUD
+#### Workspace CRUD
 
 | Method | Endpoint                      | Description                      |
 | ------ | ----------------------------- | -------------------------------- |
@@ -39,7 +39,7 @@ Task managment system is a Django REST API project for managing workspaces, proj
 | DELETE | `api/workspaces/{workspace_id}/` | Delete workspace (OWNER only)    |
 
 
-### Workspace Member Management
+#### Workspace Member Management
 
 | Method | Endpoint                                              | Description                |
 | ------ | ----------------------------------------------------- | -------------------------- |
@@ -54,7 +54,7 @@ Task managment system is a Django REST API project for managing workspaces, proj
 * MEMBER cannot manage members
 
 
-## 📁 PROJECT APIs
+### 📁 PROJECT APIs
 
 | Method | Endpoint                  | Description                      |
 | ------ | ------------------------- | -------------------------------- |
@@ -65,7 +65,7 @@ Task managment system is a Django REST API project for managing workspaces, proj
 | DELETE | `api/projects/{project_id}/` | Delete project (ADMIN / OWNER)   |
 
 
-## 📝 TASK APIs (Nested under Project)
+### 📝 TASK APIs (Nested under Project)
 
 | Method | Endpoint                                  | Description   |
 | ------ | ----------------------------------------- | ------------- |
@@ -82,7 +82,7 @@ Task managment system is a Django REST API project for managing workspaces, proj
 * Assigned user → status update only
 
 
-## 💬 TASK COMMENT APIs (Nested under Task)
+### 💬 TASK COMMENT APIs (Nested under Task)
 
 | Method | Endpoint                                  | Description                  |
 | ------ | ----------------------------------------- | ---------------------------- |
@@ -93,14 +93,14 @@ Task managment system is a Django REST API project for managing workspaces, proj
 | DELETE | `api/tasks/{task_id}/comments/{comment_id}/` | Delete comment (author only) |
 
 
-## 🔎 FILTERING PARAMETERS
+### 🔎 FILTERING PARAMETERS
 
 | Query Key     | Type    | Description                   | Example                    |
 | ------------- | ------- | ----------------------------- | -------------------------- |
 | `status`      | Integer | Filter tasks by status        | `?status=1`                |
 | `assigned_to` | UUID    | Filter tasks by assigned user | `?assigned_to=<user_uuid>` |
 
-### Status Values
+#### Status Values
 
 | Value | Meaning     |
 | ----- | ----------- |
@@ -110,7 +110,7 @@ Task managment system is a Django REST API project for managing workspaces, proj
 
 
 
-## 🔃 ORDERING PARAMETERS
+### 🔃 ORDERING PARAMETERS
 
 | Query Key              | Description            | Example                 |
 | ---------------------- | ---------------------- | ----------------------- |
@@ -121,7 +121,7 @@ Task managment system is a Django REST API project for managing workspaces, proj
 
 
 
-## 🔀 COMBINED ORDERING
+### 🔀 COMBINED ORDERING
 
 | Use Case        | Example                        |
 | --------------- | ------------------------------ |
@@ -130,7 +130,7 @@ Task managment system is a Django REST API project for managing workspaces, proj
 
 
 
-## 📌 QUICK BLOCK
+### 📌 QUICK BLOCK
 
 ```
 /api/projects/{project_id}/tasks/?status=2
